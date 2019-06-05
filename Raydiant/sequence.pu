@@ -1,0 +1,36 @@
+@startuml
+title ProcedureInMain
+actor main
+
+create FrameData
+main -> FrameData : <<create with ctor>>
+note left: 暫定なので結構雑、あとで色々変更しそう
+
+create Camera
+main -> Camera : <<create with ctor>>
+
+create Screen
+main -> Screen : <<create with ctor>>
+
+create Scene
+main -> Scene : <<create with ctor>>
+Scene -> FrameData : Load
+
+create Renderer
+main -> Renderer : <<create with ctor>>
+
+create Image
+Renderer -> Image : <<create by method>>
+note right : ここで引数にカメラとかシーンとか渡す
+
+create ActualImageFile
+Image -> ActualImageFile
+
+create GifGenerator
+main -> GifGenerator : <<create with ctor>>
+note right: こいつの引数にImageのリストを渡す
+
+create ActualGifFile
+GifGenerator -> ActualGifFile
+
+@enduml

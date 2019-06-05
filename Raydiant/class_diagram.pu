@@ -1,5 +1,5 @@
 @startuml
-title 全体クラス図
+title WholeClassDiagram
 
 interface GeometryPrimitive
 interface Renderer
