@@ -12,9 +12,18 @@
     <ClInclude Include="src\Vector3.hpp">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\IGeometryPrimitive.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Material.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IGeometryPrimitive.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

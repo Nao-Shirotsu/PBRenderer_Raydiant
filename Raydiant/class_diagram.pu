@@ -8,6 +8,7 @@ Vector3 --* Ray
 Vector3 --* Camera
 Vector3 --* Screen
 GeometryPrimitive --o Scene
+GeometryPrimitive ..> Vector3
 Polygon ..|> GeometryPrimitive
 Sphere ..|> GeometryPrimitive
 Box ..|> GeometryPrimitive
