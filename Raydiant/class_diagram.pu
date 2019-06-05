@@ -1,0 +1,32 @@
+@startuml
+title 全体クラス図
+
+interface GeometryPrimitive
+interface Renderer
+
+Vector3 --* Ray
+Vector3 --* Camera
+Vector3 --* Screen
+GeometryPrimitive --o Scene
+Polygon ..|> GeometryPrimitive
+Sphere ..|> GeometryPrimitive
+Box ..|> GeometryPrimitive
+Material --o GeometryPrimitive
+GeometryPrimitive ..> Ray
+Polygon ..> Vector3
+Sphere ..> Vector3
+Box ..> Vector3
+Scene ..> Ray
+Screen --* Renderer
+Camera --* Renderer
+Renderer ..> Color
+Pathtracer ..|> Renderer
+PhotonmappingRenderer ..|> Renderer
+RandomGenerator --o Renderer
+Renderer --> Image
+Color --o Image
+Image --* GIFGenerator
+FrameData ..> Scene
+FrameData --* GIFGenerator
+
+@enduml
